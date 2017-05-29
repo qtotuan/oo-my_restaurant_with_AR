@@ -18,4 +18,8 @@ class Restaurant < ActiveRecord::Base
     puts ""
     puts "#{self.name}\'s average rating is: #{average_rating}".colorize(:yellow)
   end
+
+
+  
+
 end

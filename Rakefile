@@ -1,6 +1,7 @@
 require_relative 'app'
 require 'sinatra/activerecord/rake'
 
+
 # desc "Run Migrations"
 # namespace :db do
 #   task :migrate do
@@ -11,11 +12,12 @@ require 'sinatra/activerecord/rake'
 desc "load my app.rb and open pry"
 task :console do
   require 'pry'
-  exec "pry -r ./app.rb"
+  # exec "pry -r ./app.rb"
   Pry.start
 end
 
 desc "run app.rb"
 task :run do
-  exec "./app.rb"
+  CLI.new.start
+  #exec "./app.rb"
 end
